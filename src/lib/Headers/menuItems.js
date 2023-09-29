@@ -8,10 +8,6 @@ export default [
     url: '/about/',
   },
   {
-    name: 'Award',
-    url: '/award/',
-  },
-  {
     name: 'Trafficking',
     url: '/trafficking/',
   },
@@ -19,13 +15,7 @@ export default [
     name: 'Indicators',
     url: '/indicators/',
   },
-  {
-    name: 'Media',
-    url: '/media/',
-    children: [
-      { name: 'Videos', url: '/media/videos/' },
-      { name: 'Poster', url: '/media/poster/' },
-      { name: 'Resources', url: '/media/resources/' },
-    ],
-  },
+  { name: 'Videos', url: '/media/videos/' },
+  { name: 'Posters', url: '/media/posters/' },
+  { name: 'Resources', url: '/media/resources/' },
 ]

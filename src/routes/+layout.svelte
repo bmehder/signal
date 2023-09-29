@@ -8,14 +8,14 @@
 
   // export let data
 
-  const mobileThreshold = 960
+  const mobileThreshold = 1250
 </script>
 
 
 <div class="wrapper">
   <Header {mobileThreshold} />
 
-  <main id="main-content" class="flow">
+  <main id="main-content">
     <slot />
   </main>
 

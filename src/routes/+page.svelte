@@ -6,9 +6,7 @@
 <section class="hero full">
   <div class="inner flex swap">
     <div>
-      <Sveltetube
-        shadow="0 1rem 2rem rgba(0,0,0,0.5)"
-      />
+      <Sveltetube id="a3TkocoK7Kk" shadow="0 1rem 2rem rgba(0,0,0,0.5)" />
     </div>
     <div class="flow right">
       <div class="h1">A NEW SOS HUMAN TRAFFICKING HAND SIGNAL HAS BEEN DEVELOPED</div>
@@ -19,28 +17,24 @@
 
 <section>
   <div class="inner flow">
-    
     <h2>Section Heading</h2>
-    
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores qui quasi dolorum
-      harum facilis odio, consectetur deserunt aliquid laudantium enim, nulla
-      necessitatibus repudiandae, et neque eius reprehenderit sequi vel similique quaerat
-      placeat. Iusto rerum odit incidunt, blanditiis sed molestiae praesentium? Qui
-      aspernatur sunt culpa ad eos excepturi illo doloremque sapiente.
-    </p>
-    
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores qui quasi dolorum
-      harum facilis odio, consectetur deserunt aliquid laudantium enim, nulla
-      necessitatibus repudiandae, et neque eius reprehenderit sequi vel similique quaerat
-      placeat. Iusto rerum odit incidunt, blanditiis sed molestiae praesentium? Qui
-      aspernatur sunt culpa ad eos excepturi illo doloremque sapiente.
-    </p>
-    
-    <Countup />
-  </div>
 
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores qui quasi dolorum
+      harum facilis odio, consectetur deserunt aliquid laudantium enim, nulla
+      necessitatibus repudiandae, et neque eius reprehenderit sequi vel similique quaerat
+      placeat. Iusto rerum odit incidunt, blanditiis sed molestiae praesentium? Qui
+      aspernatur sunt culpa ad eos excepturi illo doloremque sapiente.
+    </p>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores qui quasi dolorum
+      harum facilis odio, consectetur deserunt aliquid laudantium enim, nulla
+      necessitatibus repudiandae, et neque eius reprehenderit sequi vel similique quaerat
+      placeat. Iusto rerum odit incidunt, blanditiis sed molestiae praesentium? Qui
+      aspernatur sunt culpa ad eos excepturi illo doloremque sapiente.
+    </p>
+  </div>
 </section>
 
 <section class="watch-for-signal full">
@@ -50,9 +44,7 @@
       <div class="flow overlay">
         <p class="h1">U.S. NATIONAL HUMAN TRAFFICKING HOTLINE</p>
         <a class="button" href="tel:18883737888">1-888-373-7888</a>
-        <p class="h2">
-          OR TEXT "BE FREE" TO
-        </p>
+        <p class="h2">OR TEXT "BE FREE" TO</p>
         <a class="button" style="color: var(--light);" href="sms:233733">233733</a>
       </div>
     </div>
@@ -117,6 +109,11 @@
       placeat. Iusto rerum odit incidunt, blanditiis sed molestiae praesentium? Qui
       aspernatur sunt culpa ad eos excepturi illo doloremque sapiente.
     </p>
+
+    <div>
+      <Sveltetube id="t1tIY5bgYto" />
+      <Countup />
+    </div>
   </div>
 </section>
 

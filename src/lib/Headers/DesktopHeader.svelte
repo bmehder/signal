@@ -41,12 +41,12 @@
     padding-inline: var(--size);
     text-decoration: underline;
     text-underline-offset: calc(var(--half-size) / 2);
-    transform: translateY(-300%);
+    transform: translateY(-100%);
   }
   
   .skip-nav-link:focus {
     transition: transform 200ms ease-in;
-    transform: translateY(-120%);
+    transform: translateY(0%);
   }
 
   .inner {
@@ -89,7 +89,7 @@
   }
 
   a {
-    color: var(--light);
+    color: var(--accent);
     text-underline-offset: var(--half-size);
     text-decoration-thickness: calc(var(--size) / 12);
   }

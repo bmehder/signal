@@ -4,7 +4,7 @@
 
   const logo = '<img src="/logo.webp" alt="Share The Signal Logo" />'
 
-  export let mobileThreshold = 768
+  export let mobileThreshold = 1250
 
   let innerWidth
 </script>
