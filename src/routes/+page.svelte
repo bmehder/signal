@@ -1,5 +1,6 @@
 <script>
   import Sveltetube from '$lib/Sveltetube.svelte'
+  import Countup from '$lib/Countup.svelte'
 </script>
 
 <section class="hero full">
@@ -18,8 +19,9 @@
 
 <section>
   <div class="inner flow">
+    
     <h2>Section Heading</h2>
-
+    
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores qui quasi dolorum
       harum facilis odio, consectetur deserunt aliquid laudantium enim, nulla
@@ -27,7 +29,7 @@
       placeat. Iusto rerum odit incidunt, blanditiis sed molestiae praesentium? Qui
       aspernatur sunt culpa ad eos excepturi illo doloremque sapiente.
     </p>
-
+    
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores qui quasi dolorum
       harum facilis odio, consectetur deserunt aliquid laudantium enim, nulla
@@ -35,7 +37,10 @@
       placeat. Iusto rerum odit incidunt, blanditiis sed molestiae praesentium? Qui
       aspernatur sunt culpa ad eos excepturi illo doloremque sapiente.
     </p>
+    
+    <Countup />
   </div>
+
 </section>
 
 <section class="watch-for-signal full">
