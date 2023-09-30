@@ -21,31 +21,27 @@
     easing: cubicOut,
   })
 
-  // const init = () => {
-  //   slavery.set(SLAVERY)
-  //   labor.set(LABOR)
-  //   marriage.set(MARRIAGE)
-  // }
+  const countup = node => {
+    const options = { threshold: 0.9 }
 
-  const observe = node => {
+    const setNewStoreValues = x => {
+      if (x.isIntersecting) {
+        slavery.set(SLAVERY)
+        labor.set(LABOR)
+        marriage.set(MARRIAGE)
+      }
+    }
+
     const observer = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            slavery.set(SLAVERY)
-            labor.set(LABOR)
-            marriage.set(MARRIAGE)
-          }
-        })
-      },
-      { threshold: 0.9 }
+      xs => xs.forEach(setNewStoreValues),
+      options
     )
 
     observer.observe(node)
   }
 </script>
 
-<div use:observe class="countup bg-accent">
+<div use:countup class="countup bg-accent">
   <div class="inner flex">
     <div>
       <p class="h2">{parseInt($slavery).toLocaleString()}+</p>
