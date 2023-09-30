@@ -53,7 +53,7 @@
 <section>
   <div class="inner flow">
     <blockquote class="flow">
-      <p class="h2">"Never stay silent. Neutrality helps the oppressor, never the victim.  Silence encourages the tormentor, never the tormented."</p>
+      <p>"Never stay silent. Neutrality helps the oppressor, never the victim.  Silence encourages the tormentor, never the tormented."</p>
 
       <p>By Wiesle Elie, Nobel Peace Prize 1986</p>
     </blockquote>
@@ -79,7 +79,8 @@
 
   blockquote {
     padding: var(--double-size);
-    border: 4px solid var(--accent);
+    font-size: var(--size);
+    border: 4px solid var(--accent-light);
   }
 
   blockquote p:first-child {

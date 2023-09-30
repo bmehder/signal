@@ -4,13 +4,13 @@
 </script>
 
 <section class="hero full">
-  <div class="inner flex swap">
+  <div class="inner flex">
+    <div class="flow right">
+      <div class="h1">A New SOS Human Trafficking Hand Signal</div>
+      <a href="/trafficking" class="button">Learn More</a>
+    </div>
     <div>
       <Sveltetube id="a3TkocoK7Kk" shadow="0 1rem 2rem rgba(0,0,0,0.5)" />
-    </div>
-    <div class="flow right">
-      <div class="h1">A NEW SOS HUMAN TRAFFICKING HAND SIGNAL HAS BEEN DEVELOPED</div>
-      <a href="/trafficking" class="button">Learn More</a>
     </div>
   </div>
 </section>
@@ -34,6 +34,14 @@
       placeat. Iusto rerum odit incidunt, blanditiis sed molestiae praesentium? Qui
       aspernatur sunt culpa ad eos excepturi illo doloremque sapiente.
     </p>
+    
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores qui quasi dolorum
+      harum facilis odio, consectetur deserunt aliquid laudantium enim, nulla
+      necessitatibus repudiandae, et neque eius reprehenderit sequi vel similique quaerat
+      placeat. Iusto rerum odit incidunt, blanditiis sed molestiae praesentium? Qui
+      aspernatur sunt culpa ad eos excepturi illo doloremque sapiente.
+    </p>
   </div>
 </section>
 
@@ -42,9 +50,9 @@
     <div />
     <div>
       <div class="flow overlay">
-        <p class="h1">U.S. NATIONAL HUMAN TRAFFICKING HOTLINE</p>
+        <p class="h1">U.S. National Human Trafficking Hotline</p>
         <a class="button" href="tel:18883737888">1-888-373-7888</a>
-        <p class="h2">OR TEXT "BE FREE" TO</p>
+        <p class="h2">Or Text "Be Free" to</p>
         <a class="button" style="color: var(--light);" href="sms:233733">233733</a>
       </div>
     </div>
@@ -123,8 +131,8 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    text-transform: uppercase;
     color: var(--light);
+    text-transform: uppercase;
   }
 
   .full .h2 {
@@ -133,6 +141,10 @@
 
   .hero {
     background-image: url('/woman-distress.webp');
+  }
+
+  .hero .flex {
+    align-items: center;
   }
 
   .watch-for-signal {

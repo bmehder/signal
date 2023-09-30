@@ -19,11 +19,14 @@
     height: calc(var(--size) * 1.5);
   }
 
+  button {
+    color: white;;
+  }
+  
   button:is(:focus-visible) {
     outline: 2px solid white;
     outline-offset: 0.25em;
     border-radius: 2px;
-    color: white;
   }
 
   button:hover {
