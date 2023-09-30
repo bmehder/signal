@@ -1,58 +1,63 @@
 <script>
   import { tweened } from 'svelte/motion'
   import { cubicOut } from 'svelte/easing'
+  import { observer } from '$lib/utils.js'
 
   const SLAVERY = 40_300_000
   const LABOR = 24_900_000
   const MARRIAGE = 15_400_000
 
-  const slavery = tweened(0, {
+  const tweenOptions = {
     duration: 2000,
     easing: cubicOut,
-  })
+  }
 
-  const labor = tweened(0, {
-    duration: 2000,
-    easing: cubicOut,
-  })
+  const slavery = tweened(0, tweenOptions)
+  const labor = tweened(0, tweenOptions)
+  const marriage = tweened(0, tweenOptions)
 
-  const marriage = tweened(0, {
-    duration: 2000,
-    easing: cubicOut,
-  })
+  const countup = () => {
+    slavery.set(SLAVERY)
+    labor.set(LABOR)
+    marriage.set(MARRIAGE)
+  }
 
-  const countup = node => {
-    const options = { threshold: 0.9 }
+  const countdown = () => {
+    slavery.set(0)
+    labor.set(0)
+    marriage.set(0)
+  }
 
-    const setNewStoreValues = x => {
-      if (x.isIntersecting) {
-        slavery.set(SLAVERY)
-        labor.set(LABOR)
-        marriage.set(MARRIAGE)
-      }
-    }
-
-    const observer = new IntersectionObserver(
-      xs => xs.forEach(setNewStoreValues),
-      options
-    )
-
-    observer.observe(node)
+  const callbacks = {
+    in: countup,
+    out: countdown,
   }
 </script>
 
-<div use:countup class="countup bg-accent">
+<div use:observer={callbacks} class="countup center bg-accent">
   <div class="inner flex">
     <div>
-      <p class="h2">{parseInt($slavery).toLocaleString()}+</p>
+      {#if $slavery === 0}
+        <p class="h2">-</p>
+      {:else}
+        <p class="h2">{parseInt($slavery).toLocaleString() + '+'}</p>
+      {/if}
       <p>Victims of Modern Slavery</p>
     </div>
     <div>
-      <p class="h2">{parseInt($labor).toLocaleString()}+</p>
+      {#if $labor === 0}
+        <p class="h2">-</p>
+      {:else}
+        <p class="h2">{parseInt($labor).toLocaleString() + '+'}</p>
+      {/if}
       <p>Victims in Forced Labor</p>
     </div>
     <div>
-      <p class="h2">{parseInt($marriage).toLocaleString()}+</p>
+      {#if $marriage === 0}
+        <p class="h2">-</p>
+      {:else}
+        <p class="h2">{parseInt($marriage).toLocaleString() + '+'}</p>
+      {/if}
       <p>Victims in Forced Marriage</p>
     </div>
   </div>
@@ -60,8 +65,6 @@
 
 <style>
   .countup {
-    justify-content: center;
     padding: var(--size);
-    text-align: center;
   }
 </style>

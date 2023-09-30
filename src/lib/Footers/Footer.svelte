@@ -1,8 +1,8 @@
 <script>
-  import Facebook from '$lib/icons/Facebook.svelte'
-  import Instagram from '$lib/icons/Instagram.svelte'
-  import Youtube from '$lib/icons/Youtube.svelte'
-  import LinkedIn from '$lib/icons/LinkedIn.svelte'
+  // import Facebook from '$lib/icons/Facebook.svelte'
+  // import Instagram from '$lib/icons/Instagram.svelte'
+  // import Youtube from '$lib/icons/Youtube.svelte'
+  // import LinkedIn from '$lib/icons/LinkedIn.svelte'
 
   const currentYear = new Date().getFullYear()
 </script>
