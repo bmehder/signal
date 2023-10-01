@@ -3,10 +3,6 @@
   import { cubicOut } from 'svelte/easing'
   import { observer } from '$lib/utils.js'
 
-  const SLAVERY = 40_300_000
-  const LABOR = 24_900_000
-  const MARRIAGE = 15_400_000
-
   const tweenOptions = {
     duration: 2000,
     easing: cubicOut,
@@ -16,21 +12,17 @@
   const labor = tweened(0, tweenOptions)
   const marriage = tweened(0, tweenOptions)
 
-  const countup = () => {
-    slavery.set(SLAVERY)
-    labor.set(LABOR)
-    marriage.set(MARRIAGE)
-  }
-
-  const countdown = () => {
-    slavery.set(0)
-    labor.set(0)
-    marriage.set(0)
-  }
-
   const callbacks = {
-    in: countup,
-    out: countdown,
+    in: () => {
+      slavery.set(40_300_000)
+      labor.set(24_900_000)
+      marriage.set(15_400_000)
+    },
+    out: () => {
+      slavery.set(0)
+      labor.set(0)
+      marriage.set(0)
+    },
   }
 </script>
 

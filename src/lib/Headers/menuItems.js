@@ -16,6 +16,10 @@ export default [
     url: '/indicators/',
   },
   { name: 'Videos', url: '/media/videos/' },
-  { name: 'Posters', url: '/media/posters/' },
-  { name: 'Resources', url: '/media/resources/' },
+  {
+    name: 'Resources',
+    url: '/media/resources/',
+    children: [{ name: 'Posters', url: '/media/posters/' }],
+  },
+  { name: 'Contact', url: '/contact/' },
 ]
