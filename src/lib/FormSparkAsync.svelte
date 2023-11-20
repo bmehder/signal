@@ -1,4 +1,5 @@
 <script>
+  import Botpoison from "@botpoison/browser";
   import { onMount } from 'svelte'
   import Spinner from '$lib/Spinner.svelte'
 
@@ -66,10 +67,6 @@
   }
 </script>
 
-<svelte:head>
-  <script src="https://unpkg.com/@botpoison/browser" async></script>
-</svelte:head>
-
 <section class="flow">
   {#if isSubmitted}
     <p class="h2">Thank you for your message!</p>
@@ -134,7 +131,7 @@
         />
       </div>
       <div>
-        <button type="submit">
+        <button class="button" type="submit" disabled={isSubmitting}>
           {#if isSubmitting}
             <Spinner />
           {:else}
@@ -165,10 +162,21 @@
   }
 
   span {
-    color: red;
+    color: var(--accent);
   }
 
   button {
     padding-block: var(--size);
+  }
+
+  .button:hover,
+  .button:focus-visible {
+    color: var(--accent);
+    outline-color: var(--accent);
+  }
+  
+  .button:disabled {
+    outline-color: var(--accent);
+    background-color: transparent;
   }
 </style>
